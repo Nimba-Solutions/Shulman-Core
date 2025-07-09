@@ -10,7 +10,25 @@ project:
         prefix_beta: 'beta/'
         prefix_release: 'release/'
     source_format: sfdx
-
+    dependencies:
+        - namespace: litify_pm
+          version: "32.9"
+        - package_name: GetPicklistValuesBulkified Version 0.1
+          version_id: "04t5G0000043xs7QAA"
+        - package_name: directNavigation Version 0.1
+          version_id: "04t5G000004PuWpQAK"
+        - package_name: customHeader Version 0.1
+          version_id: "04t5G000004PucoQAC"
+        - package_name: lookupFSC Version CommunityFix
+          version_id: "04t1K0000033M3ZQAU"
+        - package_name: ShowToastFA Version Summer 2018
+          version_id: "04tB0000000N6GxIAK"
+        - package_name: FlowActionsBasePack Version 3.15.0.0
+          version_id: "04t8b000001BTgsAAG"
+        - package_name: FlowScreenComponentsBasePack Version 3.3.2.0
+          version_id: "04t5G000004XZjLQAW"        
+        - package_name: multishimFSC Version 1.0
+          version_id: "04tB0000000N4tiIAC"
 tasks:
     robot:
         options:
