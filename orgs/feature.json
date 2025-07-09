@@ -5,6 +5,12 @@
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
+    "emailAdministrationSettings": {
+      "enableEnhancedEmailEnabled": true
+    },
+    "enhancedNotesSettings": {
+      "enableEnhancedNotes": true
+    },
     "chatterSettings": {
       "enableChatter": true
     },
@@ -19,6 +25,9 @@
     },
     "languageSettings": {
       "enableTranslationWorkbench": true
+    },
+    "apexSettings": {
+      "enableCompileOnDeploy": true
     }
   }
 }
