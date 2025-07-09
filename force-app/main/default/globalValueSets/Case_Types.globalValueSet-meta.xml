@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Labor Law</fullName>
+        <default>false</default>
+        <label>Labor Law</label>
+    </customValue>
+    <customValue>
+        <fullName>Premises</fullName>
+        <default>false</default>
+        <label>Premises</label>
+    </customValue>
+    <customValue>
+        <fullName>MVA</fullName>
+        <default>false</default>
+        <label>MVA</label>
+    </customValue>
+    <customValue>
+        <fullName>PAC</fullName>
+        <default>false</default>
+        <label>PAC</label>
+    </customValue>
+    <customValue>
+        <fullName>Rikers</fullName>
+        <default>false</default>
+        <label>Rikers</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrongful Conviction</fullName>
+        <default>false</default>
+        <label>Wrongful Conviction</label>
+    </customValue>
+    <customValue>
+        <fullName>SSDI</fullName>
+        <default>false</default>
+        <label>SSDI</label>
+    </customValue>
+    <customValue>
+        <fullName>SSI</fullName>
+        <default>false</default>
+        <label>SSI</label>
+    </customValue>
+    <customValue>
+        <fullName>Concurrent</fullName>
+        <default>false</default>
+        <label>Concurrent</label>
+    </customValue>
+    <customValue>
+        <fullName>Disabled Widow&apos;s Benefits</fullName>
+        <default>false</default>
+        <label>Disabled Widow&apos;s Benefits</label>
+    </customValue>
+    <customValue>
+        <fullName>ANCR</fullName>
+        <default>false</default>
+        <label>ANCR</label>
+    </customValue>
+    <customValue>
+        <fullName>ODNCR/Repetitive Stress</fullName>
+        <default>false</default>
+        <label>ODNCR/Repetitive Stress</label>
+    </customValue>
+    <customValue>
+        <fullName>Disallowance</fullName>
+        <default>false</default>
+        <label>Disallowance</label>
+    </customValue>
+    <customValue>
+        <fullName>Death Claim</fullName>
+        <default>false</default>
+        <label>Death Claim</label>
+    </customValue>
+    <customValue>
+        <fullName>Local 3</fullName>
+        <default>false</default>
+        <label>Local 3</label>
+    </customValue>
+    <customValue>
+        <fullName>DOCCS-State </fullName>
+        <default>false</default>
+        <label>DOCCS-State </label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Prison </fullName>
+        <default>false</default>
+        <label>Federal Prison </label>
+    </customValue>
+    <customValue>
+        <fullName>County/City Jail (Not RIkers)</fullName>
+        <default>false</default>
+        <label>County/City Jail (Not RIkers)</label>
+    </customValue>
+    <customValue>
+        <fullName>ASA</fullName>
+        <default>false</default>
+        <label>ASA</label>
+    </customValue>
+    <customValue>
+        <fullName>Sexual Assault </fullName>
+        <default>false</default>
+        <label>Sexual Assault </label>
+    </customValue>
+    <customValue>
+        <fullName>Sing Sing Project</fullName>
+        <default>false</default>
+        <label>Sing Sing Project</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - Labor Law (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - Labor Law (MUNICIPAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - Premises</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - Premises</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - Premises (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - Premises (MUNICIPAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - MVA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - MVA</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - MVA (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - MVA (MUNICIPAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - MVA-REAR END</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - MVA-REAR END</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - MVA-REAR END (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - MVA-REAR END (MUNICIPAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>PI - Labor Law</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI - Labor Law</label>
+    </customValue>
+    <customValue>
+        <fullName>PI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PI</label>
+    </customValue>
+    <masterLabel>Case Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>240 - Fall from height</fullName>
+        <default>false</default>
+        <label>240 - Fall from height</label>
+    </customValue>
+    <customValue>
+        <fullName>240 - Falling Object</fullName>
+        <default>false</default>
+        <label>240 - Falling Object</label>
+    </customValue>
+    <customValue>
+        <fullName>241(6) - Trip and Fall</fullName>
+        <default>false</default>
+        <label>241(6) - Trip and Fall</label>
+    </customValue>
+    <customValue>
+        <fullName>241(6) - Slip and Fall</fullName>
+        <default>false</default>
+        <label>241(6) - Slip and Fall</label>
+    </customValue>
+    <customValue>
+        <fullName>241(6) - Defective Tool</fullName>
+        <default>false</default>
+        <label>241(6) - Defective Tool</label>
+    </customValue>
+    <customValue>
+        <fullName>241(6) - Other</fullName>
+        <default>false</default>
+        <label>241(6) - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Slip and Fall</fullName>
+        <default>false</default>
+        <label>Slip and Fall</label>
+    </customValue>
+    <customValue>
+        <fullName>Trip and Fall</fullName>
+        <default>false</default>
+        <label>Trip and Fall</label>
+    </customValue>
+    <customValue>
+        <fullName>Snow &amp; Ice</fullName>
+        <default>false</default>
+        <label>Snow &amp; Ice</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceiling Fall</fullName>
+        <default>false</default>
+        <label>Ceiling Fall</label>
+    </customValue>
+    <customValue>
+        <fullName>Ceiling Collapse / Falling Object</fullName>
+        <default>false</default>
+        <label>Ceiling Collapse / Falling Object</label>
+    </customValue>
+    <customValue>
+        <fullName>Elevator</fullName>
+        <default>false</default>
+        <label>Elevator</label>
+    </customValue>
+    <customValue>
+        <fullName>Escalator</fullName>
+        <default>false</default>
+        <label>Escalator</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Poison</fullName>
+        <default>false</default>
+        <label>Lead Poison</label>
+    </customValue>
+    <customValue>
+        <fullName>Dog Bite</fullName>
+        <default>false</default>
+        <label>Dog Bite</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrongful Death</fullName>
+        <default>false</default>
+        <label>Wrongful Death</label>
+    </customValue>
+    <customValue>
+        <fullName>Rearend</fullName>
+        <default>false</default>
+        <label>Rearend</label>
+    </customValue>
+    <customValue>
+        <fullName>Sideswipe</fullName>
+        <default>false</default>
+        <label>Sideswipe</label>
+    </customValue>
+    <customValue>
+        <fullName>Pedestrian Knockdown</fullName>
+        <default>false</default>
+        <label>Pedestrian Knockdown</label>
+    </customValue>
+    <customValue>
+        <fullName>Bicycle Knockdown</fullName>
+        <default>false</default>
+        <label>Bicycle Knockdown</label>
+    </customValue>
+    <customValue>
+        <fullName>Motorcycle</fullName>
+        <default>false</default>
+        <label>Motorcycle</label>
+    </customValue>
+    <customValue>
+        <fullName>False Arrest</fullName>
+        <default>false</default>
+        <label>False Arrest</label>
+    </customValue>
+    <customValue>
+        <fullName>Excessive Force</fullName>
+        <default>false</default>
+        <label>Excessive Force</label>
+    </customValue>
+    <customValue>
+        <fullName>False Arrest with Excessive Force</fullName>
+        <default>false</default>
+        <label>False Arrest with Excessive Force</label>
+    </customValue>
+    <customValue>
+        <fullName>Malicious Prosecution</fullName>
+        <default>false</default>
+        <label>Malicious Prosecution</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrongful Imprisonment</fullName>
+        <default>false</default>
+        <label>Wrongful Imprisonment</label>
+    </customValue>
+    <customValue>
+        <fullName>Failure to Supervise</fullName>
+        <default>false</default>
+        <label>Failure to Supervise</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Sing Sing Class Action</fullName>
+        <default>false</default>
+        <label>Sing Sing Class Action</label>
+    </customValue>
+    <customValue>
+        <fullName>MVA (REAR END)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MVA (REAR END)</label>
+    </customValue>
+    <customValue>
+        <fullName>Premises</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premises</label>
+    </customValue>
+    <customValue>
+        <fullName>Premises (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premises (MUNICIPAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>Premises – Wrongful Death</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Premises – Wrongful Death</label>
+    </customValue>
+    <customValue>
+        <fullName>241(6)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>241(6)</label>
+    </customValue>
+    <customValue>
+        <fullName>MVA (MUNICIPAL)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MVA (MUNICIPAL)</label>
+    </customValue>
+    <masterLabel>Sub types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Worker Compensation</fullName>
+        <default>false</default>
+        <label>Worker Compensation</label>
+    </customValue>
+    <customValue>
+        <fullName>WC &amp; PI</fullName>
+        <default>false</default>
+        <label>WC &amp; PI</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Injury</fullName>
+        <default>false</default>
+        <label>Personal Injury</label>
+    </customValue>
+    <customValue>
+        <fullName>Civil Rights</fullName>
+        <default>false</default>
+        <label>Civil Rights</label>
+    </customValue>
+    <customValue>
+        <fullName>SSD</fullName>
+        <default>false</default>
+        <label>SSD</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Malpractice</fullName>
+        <default>false</default>
+        <label>Medical Malpractice</label>
+    </customValue>
+    <customValue>
+        <fullName>Employment Law</fullName>
+        <default>false</default>
+        <label>Employment Law</label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Workers&apos; Compensation</fullName>
+        <default>false</default>
+        <label>Federal Workers&apos; Compensation</label>
+    </customValue>
+    <customValue>
+        <fullName>Immigration</fullName>
+        <default>false</default>
+        <label>Immigration</label>
+    </customValue>
+    <customValue>
+        <fullName>Mass Tort/Product Liability</fullName>
+        <default>false</default>
+        <label>Mass Tort/Product Liability</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate/Closings</fullName>
+        <default>false</default>
+        <label>Real Estate/Closings</label>
+    </customValue>
+    <customValue>
+        <fullName>Landlord-Tenant</fullName>
+        <default>false</default>
+        <label>Landlord-Tenant</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Law</fullName>
+        <default>false</default>
+        <label>Family Law</label>
+    </customValue>
+    <customValue>
+        <fullName>Estate Planning</fullName>
+        <default>false</default>
+        <label>Estate Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>Business/Corporate</fullName>
+        <default>false</default>
+        <label>Business/Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>Criminal Defense</fullName>
+        <default>false</default>
+        <label>Criminal Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Traffic</fullName>
+        <default>false</default>
+        <label>Traffic</label>
+    </customValue>
+    <customValue>
+        <fullName>Veteran Disability</fullName>
+        <default>false</default>
+        <label>Veteran Disability</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
