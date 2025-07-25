@@ -19,6 +19,7 @@ public class LightningLookupControllerTest {
 	static testMethod void myTest1() {
 
 		Account acct = new Account(Name = 'Test Account', litify_pm__Last_Name__c = 'Test');
+                System.debug('DEBUG: Creating Account with Name = ' + acct.Name + ', litify_pm__Last_Name__c = ' + acct.litify_pm__Last_Name__c);
 		insert acct;
 		LightningLookupController.LookupRecords res = LightningLookupController.getRecords('Account', '', 'Name', '', 'Name like \'test%\'','','');
 		System.assertEquals(null,res);
@@ -41,6 +42,8 @@ public class LightningLookupControllerTest {
 		s = LightningLookupController.getReference('Account.OwnerId');
 		System.assertEquals('User',s);
 		res = LightningLookupController.getFieldValue('Account', acct.Id, 'Name');
+                System.debug('DEBUG: acct.Name = ' + acct.Name);
+                System.debug('DEBUG: res.lstDisplay[0] = ' + res.lstDisplay[0]);
 		System.assertEquals(acct.Name,res.lstDisplay[0]);
 		System.assertEquals(acct.Id,res.lstValue[0]);
 		System.assertEquals(1, res.lstRecords.size());
