@@ -18,7 +18,7 @@ public class LightningLookupControllerTest {
 
 	static testMethod void myTest1() {
 
-		Account acct = new Account(Name = 'Test Account');
+		Account acct = new Account(Name = 'Test Account', litify_pm__Last_Name__c = 'Test');
 		insert acct;
 		LightningLookupController.LookupRecords res = LightningLookupController.getRecords('Account', '', 'Name', '', 'Name like \'test%\'','','');
 		System.assertEquals(null,res);
