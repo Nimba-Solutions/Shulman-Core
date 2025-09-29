@@ -12,9 +12,9 @@ project:
     source_format: sfdx
     dependencies:
         - namespace: litify_pm
-          version: "32.9"
+          version: "35.5"
         - package_name: GetPicklistValuesBulkified Version 0.1
-          version_id: "04t5G0000043xs7QAA"
+          version_id: "04tHs000000w0cuIAA"
         - package_name: directNavigation Version 0.1
           version_id: "04t5G000004PuWpQAK"
         - package_name: customHeader Version 0.1
