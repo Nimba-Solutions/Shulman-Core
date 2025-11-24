@@ -12,22 +12,23 @@ project:
     source_format: sfdx
     dependencies:
         - namespace: litify_pm
-          version: "35.5"
-        - package_name: GetPicklistValuesBulkified Version 1.5.0
+          version: "36.2"
+          version_id: "04tHs000000w1BVIAY"
+        - package_name: GetPicklistValuesBulkified Version 1.5.0.0
           version_id: "04t5G0000043xs7QAA"
-        - package_name: directNavigation Version 1.0.0
+        - package_name: directNavigation Version 1.0.0.0
           version_id: "04t5G000004PuWpQAK"
-        - package_name: customHeader Version 1.0.0
+        - package_name: customHeader Version 1.0.0.0
           version_id: "04t5G000004PucoQAC"
-        - package_name: lookupFSC Version 2.34.0
+        - package_name: lookupFSC Version 2.34.0.1
           version_id: "04t1K0000033M3ZQAU"
-        - package_name: ShowToastFA Version 1.2.0
+        - package_name: ShowToastFA Version 1.2.0.1
           version_id: "04tB0000000N6GxIAK"
-        - package_name: FlowActionsBasePack Version 3.15.0
+        - package_name: FlowActionsBasePack Version 3.15.0.0
           version_id: "04t8b000001BTgsAAG"
-        - package_name: FlowScreenComponentsBasePack Version 3.3.2
-          version_id: "04t5G000004XZjLQAW"        
-        - package_name: multishimFSC Version 1.0.0
+        - package_name: FlowScreenComponentsBasePack Version 3.3.2.0
+          version_id: "04t5G000004XZjLQAW"
+        - package_name: multishimFSC Version 1.0.0.1
           version_id: "04tB0000000N4tiIAC"
 tasks:
     robot:
