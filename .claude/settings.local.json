@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sf package installed list:*)",
+      "Bash(cat:*)",
+      "Bash(cci flow run:*)"
+    ]
+  }
+}
