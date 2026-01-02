@@ -51,3 +51,6 @@ $RECYCLE.BIN/
 .idea
 .project
 .settings
+
+# Salesforce sensitive files
+orgInfo.json
