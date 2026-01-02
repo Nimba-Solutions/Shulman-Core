@@ -21,6 +21,9 @@ public class LightningLookupControllerTest {
 		Account acct = new Account(Name = 'Test Account', litify_pm__Last_Name__c = 'Test');
                 System.debug('DEBUG: Creating Account with Name = ' + acct.Name + ', litify_pm__Last_Name__c = ' + acct.litify_pm__Last_Name__c);
 		insert acct;
+		// Re-query to get the actual Name value set by automation/triggers
+		acct = [SELECT Id, Name FROM Account WHERE Id = :acct.Id];
+		System.debug('DEBUG: After insert, acct.Name = ' + acct.Name);
 		LightningLookupController.LookupRecords res = LightningLookupController.getRecords('Account', '', 'Name', '', 'Name like \'test%\'','','');
 		System.assertEquals(null,res);
 		res = LightningLookupController.getRecords('Account', 'Id', '', '', 'Name like \'test%\'','','');
