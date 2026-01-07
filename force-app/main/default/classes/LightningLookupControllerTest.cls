@@ -16,10 +16,49 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @isTest
 public class LightningLookupControllerTest {
 
-	static testMethod void myTest1() {
+	/**
+	 * Helper method to get an Account RecordTypeId
+	 * The validation rule requires a RecordTypeId to be set
+	 */
+	private static Id getAccountRecordTypeId() {
+		// Try to find 'Business' RecordType first (common in Shulman orgs)
+		List<RecordType> recordTypes = [
+			SELECT Id
+			FROM RecordType
+			WHERE SObjectType = 'Account'
+			AND DeveloperName = 'Business'
+			LIMIT 1
+		];
+		
+		if (!recordTypes.isEmpty()) {
+			return recordTypes[0].Id;
+		}
+		
+		// Fallback to any Account RecordType
+		recordTypes = [
+			SELECT Id
+			FROM RecordType
+			WHERE SObjectType = 'Account'
+			LIMIT 1
+		];
+		
+		if (!recordTypes.isEmpty()) {
+			return recordTypes[0].Id;
+		}
+		
+		// If no RecordType exists, return null (will fail validation, but that's expected)
+		return null;
+	}
 
-		Account acct = new Account(Name = 'Test Account', litify_pm__Last_Name__c = 'Test');
-                System.debug('DEBUG: Creating Account with Name = ' + acct.Name + ', litify_pm__Last_Name__c = ' + acct.litify_pm__Last_Name__c);
+	static testMethod void myTest1() {
+		// Create Account with RecordTypeId to satisfy validation rule
+		// Name must be in "FirstName LastName" format to satisfy validation rule requiring "last name"
+		Account acct = new Account(
+			Name = 'Test Company',
+			RecordTypeId = getAccountRecordTypeId(),
+			litify_pm__Last_Name__c = 'Test'
+		);
+		System.debug('DEBUG: Creating Account with Name = ' + acct.Name + ', RecordTypeId = ' + acct.RecordTypeId + ', litify_pm__Last_Name__c = ' + acct.litify_pm__Last_Name__c);
 		insert acct;
 		// Re-query to get the actual Name value set by automation/triggers
 		acct = [SELECT Id, Name FROM Account WHERE Id = :acct.Id];
