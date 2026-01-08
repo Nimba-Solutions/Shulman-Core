@@ -53,12 +53,24 @@ public class LightningLookupControllerTest {
 	static testMethod void myTest1() {
 		// Create Account with RecordTypeId to satisfy validation rule
 		// Name must be in "FirstName LastName" format to satisfy validation rule requiring "last name"
+		// Use SObject.put() for dynamic field access to avoid compile errors when fields aren't available
 		Account acct = new Account(
-			Name = 'Test Company',
-			RecordTypeId = getAccountRecordTypeId(),
-			litify_pm__Last_Name__c = 'Test'
+			Name = 'Test Company'
 		);
-		System.debug('DEBUG: Creating Account with Name = ' + acct.Name + ', RecordTypeId = ' + acct.RecordTypeId + ', litify_pm__Last_Name__c = ' + acct.litify_pm__Last_Name__c);
+		Id recordTypeId = getAccountRecordTypeId();
+		if (recordTypeId != null) {
+			try {
+				acct.put('RecordTypeId', recordTypeId);
+			} catch (Exception e) {
+				// RecordTypeId may not be available - ignore and continue
+			}
+		}
+		try {
+			acct.put('litify_pm__Last_Name__c', 'Test');
+		} catch (Exception e) {
+			// litify_pm__Last_Name__c may not be available - ignore and continue
+		}
+		System.debug('DEBUG: Creating Account with Name = ' + acct.Name);
 		insert acct;
 		// Re-query to get the actual Name value set by automation/triggers
 		acct = [SELECT Id, Name FROM Account WHERE Id = :acct.Id];
