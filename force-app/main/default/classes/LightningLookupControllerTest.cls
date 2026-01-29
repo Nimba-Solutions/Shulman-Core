@@ -50,10 +50,32 @@ public class LightningLookupControllerTest {
 		return null;
 	}
 
+	/**
+	 * Set Account last name field when present (e.g. litify_pm__Last_Name__c) to satisfy
+	 * validation rules that require a non-blank last name. Uses describe so it works across orgs.
+	 */
+	private static void setAccountLastNameIfPresent(Account acct, String value) {
+		if (acct == null || value == null) {
+			return;
+		}
+		Map<String, Schema.SObjectField> fields = Schema.SObjectType.Account.fields.getMap();
+		// Litify and similar packages add a Last_Name__c field on Account
+		String[] candidates = new String[]{ 'litify_pm__Last_Name__c', 'Last_Name__c' };
+		for (String fieldName : candidates) {
+			if (fields.containsKey(fieldName) && fields.get(fieldName).getDescribe().isCreateable()) {
+				try {
+					acct.put(fieldName, value);
+					return;
+				} catch (Exception e) {
+					System.debug('Could not set ' + fieldName + ': ' + e.getMessage());
+				}
+			}
+		}
+	}
+
 	static testMethod void myTest1() {
 		// Create Account with RecordTypeId to satisfy validation rule
-		// Name must be in "FirstName LastName" format to satisfy validation rule requiring "last name"
-		// Use SObject.put() for dynamic field access to avoid compile errors when fields aren't available
+		// Set last name when field exists to satisfy validation "(Test Account) cannot have a blank last name"
 		Account acct = new Account(
 			Name = 'Test Company'
 		);
@@ -65,11 +87,7 @@ public class LightningLookupControllerTest {
 				// RecordTypeId may not be available - ignore and continue
 			}
 		}
-		try {
-			acct.put('litify_pm__Last_Name__c', 'Test');
-		} catch (Exception e) {
-			// litify_pm__Last_Name__c may not be available - ignore and continue
-		}
+		setAccountLastNameIfPresent(acct, 'Company');
 		System.debug('DEBUG: Creating Account with Name = ' + acct.Name);
 		insert acct;
 		// Re-query to get the actual Name value set by automation/triggers
