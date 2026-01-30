@@ -60,17 +60,20 @@ public class LightningLookupControllerTest {
 		}
 		Map<String, Schema.SObjectField> fields = Schema.SObjectType.Account.fields.getMap();
 		// Litify and similar packages add a Last_Name__c field on Account
-		String[] candidates = new String[]{ 'litify_pm__Last_Name__c', 'Last_Name__c' };
+		// NOTE: fields.getMap() returns keys in LOWERCASE, so we must use lowercase for lookup
+		String[] candidates = new String[]{ 'litify_pm__last_name__c', 'last_name__c' };
 		for (String fieldName : candidates) {
 			if (fields.containsKey(fieldName) && fields.get(fieldName).getDescribe().isCreateable()) {
 				try {
 					acct.put(fieldName, value);
+					System.debug('Successfully set ' + fieldName + ' to: ' + value);
 					return;
 				} catch (Exception e) {
 					System.debug('Could not set ' + fieldName + ': ' + e.getMessage());
 				}
 			}
 		}
+		System.debug('WARNING: No last name field found on Account');
 	}
 
 	static testMethod void myTest1() {
