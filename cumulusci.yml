@@ -30,6 +30,7 @@ project:
           version_id: "04t5G000004XZjLQAW"
         - package_name: multishimFSC Version 1.0.0.1
           version_id: "04tB0000000N4tiIAC"
+        - github: https://github.com/nimba-solutions/docs-unlocked
 tasks:
     robot:
         options:
