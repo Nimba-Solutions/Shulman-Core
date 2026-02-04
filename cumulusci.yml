@@ -11,9 +11,10 @@ project:
         prefix_release: 'release/'
     source_format: sfdx
     dependencies:
-        - namespace: litify_pm
-          version: "36.8"
+        - package_name: Litify
           version_id: "04tHs000000w1CEIAY"
+        - package_name: Custom Lightning Text Banners
+          version_id: "04t4T0000011RGTQA2"
         - package_name: GetPicklistValuesBulkified Version 1.5.0.0
           version_id: "04t5G0000043xs7QAA"
         - package_name: directNavigation Version 1.0.0.0
