@@ -1,49 +1,50 @@
-minimum_cumulusci_version: '3.78.0'
+minimum_cumulusci_version: "3.78.0"
 project:
+  name: Shulman-Core
+  package:
     name: Shulman-Core
-    package:
-        name: Shulman-Core
-        api_version: '64.0'
-    git:
-        default_branch: 'main'
-        prefix_feature: 'feature/'
-        prefix_beta: 'beta/'
-        prefix_release: 'release/'
-    source_format: sfdx
-    dependencies:
-        - package_name: Litify
-          version_id: "04tHs000000w1CEIAY"
-        - package_name: Custom Lightning Text Banners
-          version_id: "04t4T0000011RGTQA2"
-        - package_name: GetPicklistValuesBulkified Version 1.5.0.0
-          version_id: "04t5G0000043xs7QAA"
-        - package_name: directNavigation Version 1.0.0.0
-          version_id: "04t5G000004PuWpQAK"
-        - package_name: customHeader Version 1.0.0.0
-          version_id: "04t5G000004PucoQAC"
-        - package_name: lookupFSC Version 2.34.0.1
-          version_id: "04t1K0000033M3ZQAU"
-        - package_name: ShowToastFA Version 1.2.0.1
-          version_id: "04tB0000000N6GxIAK"
-        - package_name: FlowActionsBasePack Version 3.15.0.0
-          version_id: "04t8b000001BTgsAAG"
-        - package_name: FlowScreenComponentsBasePack Version 3.3.2.0
-          version_id: "04t5G000004XZjLQAW"
-        - package_name: multishimFSC Version 1.0.0.1
-          version_id: "04tB0000000N4tiIAC"
-        - github: https://github.com/nimba-solutions/docs-unlocked
+    api_version: "64.0"
+  git:
+    default_branch: "main"
+    prefix_feature: "feature/"
+    prefix_beta: "beta/"
+    prefix_release: "release/"
+  source_format: sfdx
+  dependencies:
+    - package_name: Litify
+      version_id: "04tHs000000w1CEIAY"
+    - package_name: Custom Lightning Text Banners
+      version_id: "04t4T0000011RGTQA2"
+    - package_name: GetPicklistValuesBulkified Version 1.5.0.0
+      version_id: "04t5G0000043xs7QAA"
+    - package_name: directNavigation Version 1.0.0.0
+      version_id: "04t5G000004PuWpQAK"
+    - package_name: customHeader Version 1.0.0.0
+      version_id: "04t5G000004PucoQAC"
+    - package_name: lookupFSC Version 2.34.0.1
+      version_id: "04t1K0000033M3ZQAU"
+    - package_name: ShowToastFA Version 1.2.0.1
+      version_id: "04tB0000000N6GxIAK"
+    - package_name: FlowActionsBasePack Version 3.15.0.0
+      version_id: "04t8b000001BTgsAAG"
+    - package_name: FlowScreenComponentsBasePack Version 3.3.2.0
+      version_id: "04t5G000004XZjLQAW"
+    - package_name: multishimFSC Version 1.0.0.1
+      version_id: "04tB0000000N4tiIAC"
+    - github: https://github.com/nimba-solutions/docs-unlocked
 tasks:
-    robot:
-        options:
-            suites: robot/Shulman-Core/tests
-            options:
-                outputdir: robot/Shulman-Core/results
+  robot:
+    options:
+      suites: robot/Shulman-Core/tests
+      options:
+        outputdir: robot/Shulman-Core/results
 
-    robot_testdoc:
-        options:
-            path: robot/Shulman-Core/tests
-            output: robot/Shulman-Core/doc/Shulman-Core_tests.html
+  robot_testdoc:
+    options:
+      path: robot/Shulman-Core/tests
+      output: robot/Shulman-Core/doc/Shulman-Core_tests.html
 
-    run_tests:
-        options:
-            required_org_code_coverage_percent: 75
+  run_tests:
+    options:
+      test_suite_names: ShulmanCore
+      required_org_code_coverage_percent: 75
