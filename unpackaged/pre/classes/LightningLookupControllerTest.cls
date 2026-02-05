@@ -80,7 +80,8 @@ public class LightningLookupControllerTest {
 		// Create Account with RecordTypeId to satisfy validation rule
 		// Set last name when field exists to satisfy validation "(Test Account) cannot have a blank last name"
 		Account acct = new Account(
-			Name = 'Test Company'
+			Name = 'Test Company',
+			litify_pm__Last_Name__c = 'Company'
 		);
 		Id recordTypeId = getAccountRecordTypeId();
 		if (recordTypeId != null) {
