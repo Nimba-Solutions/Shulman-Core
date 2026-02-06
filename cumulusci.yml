@@ -21,8 +21,6 @@ project:
       version_id: "04t5G000004PuWpQAK"
     - package_name: customHeader Version 1.0.0.0
       version_id: "04t5G000004PucoQAC"
-    - package_name: lookupFSC Version 2.34.0.1
-      version_id: "04t1K0000033M3ZQAU"
     - package_name: ShowToastFA Version 1.2.0.1
       version_id: "04tB0000000N6GxIAK"
     - package_name: FlowActionsBasePack Version 3.15.0.0
