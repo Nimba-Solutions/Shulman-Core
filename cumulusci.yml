@@ -11,8 +11,9 @@ project:
     prefix_release: "release/"
   source_format: sfdx
   dependencies:
-    - namespace: litify_pm
-      version: 35.0
+    # Litify is intentionally not listed as a package dependency here.
+    # Customer orgs run different Litify versions; Litify-specific subscriber
+    # configuration lives in unpackaged/pre and deploys after Litify is present.
     - package_name: Custom Lightning Text Banners
       version_id: "04t4T0000011RGTQA2"
     - package_name: GetPicklistValuesBulkified Version 1.5.0.0
