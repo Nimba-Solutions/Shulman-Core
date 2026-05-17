@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>litify_pm__Active_Intake</fullName>
+    <active>true</active>
+    <label>Active Intake</label>
+    <picklistValues>
+        <picklist>litify_pm__Sign_Up_Method__c</picklist>
+        <values>
+            <fullName>E-Sign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pick-Up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
