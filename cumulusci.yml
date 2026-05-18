@@ -59,8 +59,10 @@ flows:
       1.5:
         task: update_dependencies
         options:
+          dependencies:
+            - namespace: litify_pm
+              version: "35.0"
           packages_only: True
-          resolution_strategy: unlocked
       2:
         task: create_package_version
         options:
@@ -70,8 +72,6 @@ flows:
           resolution_strategy: unlocked
           org_dependent: True
           force_upload: True
-          post_install_script: None
-          uninstall_script: None
       3:
         task: promote_package_version
         options:
@@ -83,6 +83,9 @@ flows:
       0.5:
         task: update_dependencies
         options:
+          dependencies:
+            - namespace: litify_pm
+              version: "35.0"
           packages_only: True
       1:
         task: create_package_version
