@@ -47,3 +47,68 @@ tasks:
     options:
       test_suite_names: ShulmanCore
       required_org_code_coverage_percent: 75
+
+flows:
+  build_unlocked_test_package:
+    steps:
+      1:
+        task: update_package_xml
+        when: project_config.project__source_format != "sfdx"
+        options:
+          path: src
+      1.5:
+        task: update_dependencies
+        options:
+          packages_only: True
+          resolution_strategy: unlocked
+      2:
+        task: create_package_version
+        options:
+          package_type: Unlocked
+          package_name: $project_config.project__package__name Unlocked Feature Test
+          version_type: minor
+          resolution_strategy: unlocked
+          org_dependent: True
+          force_upload: True
+          post_install_script: None
+          uninstall_script: None
+      3:
+        task: promote_package_version
+        options:
+          version_id: ^^create_package_version.subscriber_package_version_id
+          install_key: ^^create_package_version.install_key
+
+  release_unlocked_beta:
+    steps:
+      0.5:
+        task: update_dependencies
+        options:
+          packages_only: True
+      1:
+        task: create_package_version
+        options:
+          package_type: Unlocked
+          package_name: $project_config.project__package__name
+          skip_validation: False
+          version_base: latest_github_release
+          version_type: minor
+          force_upload: True
+          create_unlocked_dependency_packages: False
+      2:
+        task: github_release
+        options:
+          version: ^^create_package_version.version_number
+          version_id: ^^create_package_version.subscriber_package_version_id
+          dependencies: ^^create_package_version.dependencies
+          package_type: 2GP
+          tag_prefix: $project_config.project__git__prefix_beta
+      3:
+        task: github_release_notes
+        options:
+          link_pr: True
+          publish: True
+          tag: ^^github_release.tag_name
+          include_empty: True
+          version_id: ^^create_package_version.subscriber_package_version_id
+      4:
+        task: github_automerge_main
