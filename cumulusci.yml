@@ -11,9 +11,8 @@ project:
     prefix_release: "release/"
   source_format: sfdx
   dependencies:
-    # Litify is intentionally not listed as a package dependency here.
-    # Customer orgs run different Litify versions; Litify-specific subscriber
-    # configuration lives in unpackaged/pre and deploys after Litify is present.
+    - namespace: litify_pm
+      version: "35.0"
     - package_name: Custom Lightning Text Banners
       version_id: "04t4T0000011RGTQA2"
     - package_name: GetPicklistValuesBulkified Version 1.5.0.0
@@ -33,16 +32,6 @@ project:
     - github: https://github.com/nimba-solutions/docs-unlocked
     - github: https://github.com/nimba-solutions/json-unlocked
 tasks:
-  ensure_litify_installed:
-    description: Installs Litify only when the target org does not already have any Litify version.
-    class_path: tasks.ensure_litify.EnsureLitifyInstalled
-    options:
-      namespace: litify_pm
-      # Used only to seed empty scratch orgs before deploying Litify subscriber config.
-      # Existing orgs with any Litify version installed are left unchanged.
-      version: "35.0"
-      version_env_name: LITIFY_VERSION
-
   robot:
     options:
       suites: robot/Shulman-Core/tests
@@ -58,15 +47,3 @@ tasks:
     options:
       test_suite_names: ShulmanCore
       required_org_code_coverage_percent: 75
-
-flows:
-  dependencies:
-    steps:
-      1:
-        task: ensure_litify_installed
-      2:
-        task: update_dependencies
-      3:
-        task: deploy_pre
-        options:
-          path: unpackaged/pre
